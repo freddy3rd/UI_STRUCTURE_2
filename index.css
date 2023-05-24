@@ -1,0 +1,88 @@
+body{
+    padding: 0;
+    margin: 0;
+
+}
+
+.main-container{
+    grid-template-columns: 5rem 1fr;
+    grid-template-areas: 
+    "sidenav content footer"
+    "sidenav footer footer"
+    "sidenav footer footer";
+    min-height: 100vh;
+    width: 100%;
+}
+nav{
+
+    justify-self: center;
+    align-self: center;
+    grid-template-columns: "sidenav";
+}
+main{
+    grid-template-columns: "content";
+}
+footer{
+    grid-template-columns: "footer";
+}
+.img-container{
+    height: 35rem;
+    background-size: cover;
+}
+.img-1{
+    background: url("https://source.unsplash.com/cYpqYxGeqts") no-repeat;
+}
+.img-2{
+    background: url("https://source.unsplash.com/bAXqzTJ_OdQ") no-repeat;
+}
+.img-3{
+    background: url("https://source.unsplash.com/mcbXQ06Xl64") no-repeat;
+}
+.about-column{
+    position: relative;
+}
+
+.project{
+    width: 100%;
+}
+
+.my-carousel-progress {
+    background: transparent;
+  }
+  
+  .my-carousel-progress-bar {
+    background: rgba(255, 193, 7);
+    height: 5px;
+    transition: width 400ms ease;
+    width: 0;
+  }
+
+  .navbar-nav .nav-item a:hover{
+    color: rgba(255, 193, 7) !important;
+  }
+  
+ 
+  @media screen and (max-width:500px) {
+    .row{
+        place-items: center;
+    }
+    .main-container{
+
+        grid-template-areas: 'content';
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+    .splide{
+        width: 100%;
+    }
+    main{
+        display: flex !important;
+        justify-content: center ;
+        align-items: center ;
+        width: 100%;
+    }
+
+    nav{
+        display: none;
+    }
+  }
